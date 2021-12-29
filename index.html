@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Weather</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Roboto:wght@700&display=swap" rel="stylesheet"> 
+</head>
+<body>
+	<div id="citySearcherApp">
+		<div class="search-wrapper" :style="searchWrapper.styles" ref='searchWrapper'> 
+			<div class="search">
+				<input type="text" name="search" placeholder="Выбирите город" autocomplete="off" v-model="search.value" :style="search.styles" @blur="focusChange" @focus="focusChange" @mouseover='mouseoverChange' @mouseout='mouseoverChange'>
+				<img :src="'img/'+search.img+'.svg'" alt="" @click="searchXClick">
+			</div>
+			<div class="search-autocomplete" v-if="this.searchWrapper.styles.justifyContent == 'start'">
+				<div class="city-list" v-for="city in checkedCityList" :data-id="city.id">
+					{{city.name}}
+				</div>	
+			</div>
+		</div>
+	</div>
+</body>
+<script src="https://unpkg.com/vue@next"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="script.js"></script>
+</html>

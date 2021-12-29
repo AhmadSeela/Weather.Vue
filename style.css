@@ -1,0 +1,111 @@
+*{
+	margin: 0;
+	padding: 0;
+	scrollbar-color: rgba(0, 0, 0, 0.2) rgb(255,255,255,0);
+    scrollbar-width: thin;
+}
+::-webkit-scrollbar {
+	width:10px;
+	height: 10px;
+    background-color: rgb(255,255,255,0);
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10em;
+}
+::-webkit-scrollbar-button:vertical:start:decrement {
+    background-color: rgb(255,255,255,0);
+}
+::-webkit-scrollbar-button:vertical:end:increment {
+    background-color: rgb(255,255,255,0);
+}
+::-webkit-scrollbar-button:horizontal:start:decrement {
+    background-color: rgb(255,255,255,0);
+}
+::-webkit-scrollbar-button:horizontal:end:increment {
+    background-color: rgb(255,255,255,0);
+}
+body{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #e3e4e6;
+}
+#citySearcherApp{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.search-wrapper{
+	width: 100%;
+	height: 100%;
+	max-width: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background:url(img/sky.jpg);
+	background-size: cover;
+	flex-direction: column;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.search{
+	position: relative;
+}
+.search-wrapper input{
+	width: 230px;
+	height: 38px;
+	font-size: 25px;
+	font-family: 'Oswald', sans-serif;
+	padding: 5px;
+	opacity: 80%;
+	border-radius: 5px;
+	border: none;
+	transition: 0.1s;
+}
+.search-wrapper img{
+	position: absolute;
+	top:0;
+	right: 5px;
+	width: 25px;
+	padding: 12px 0px 12px 0px;
+	opacity: 80%;
+	cursor: pointer;
+}
+.search-wrapper input:focus{
+	outline: none;
+	opacity: 100%;
+	transition: 0.1s;
+}
+.search-wrapper input:hover{
+	opacity: 100%;
+	transition: 0.1s;
+}
+.search-autocomplete{
+	width: 100%;
+	height: 92%;
+	margin-top: 2px;
+	border-radius: 5px;
+	background-color: rgb(255,255,255,0.8);
+	overflow: auto;
+	transition: 0.1s;
+}
+.city-list{
+	margin-top:2px;
+	margin-right: 2.5%;
+	margin-left: 2.5%;
+	width: 95%;
+	height: 10%;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	font-family: 'Oswald';
+	font-size: 25px;
+	cursor: pointer;
+}
